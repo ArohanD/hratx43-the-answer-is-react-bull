@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
-import { categories } from '../../testdata';
+import React, { Component } from "react";
+import { categories } from "../../testdata";
+import Scoreboard from "./Scoreboard";
+import Gameboard from "./Gameboard";
+import Response from "./Response";
 
 export default class App extends Component {
   constructor(props) {
@@ -17,13 +20,13 @@ export default class App extends Component {
     //1. A query to /api/categories to get a set of categories
     //2. A set of queries afterwards to /api/category at each category id to get clues for that category
   }
+
   render() {
     return (
-      <div id={'app'}>
-        What is Reactor 2?
-        {/* Gameboard */}
-        {/* Scoreboard */}
-        {/* Response */}
+      <div id={"app"}>
+        <Gameboard currentQuestion={this.state.currentQuestion} selectQuestion={function(){}} categories={this.state.results} answeredQuestions={this.state.answeredQuestions} />
+        <Scoreboard score={this.state.score} />
+        <Response recordResponse={null} submitResponse={null}/>
       </div>
     );
   }
