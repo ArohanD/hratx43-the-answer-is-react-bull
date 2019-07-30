@@ -16,8 +16,7 @@ const Clue = props => {
   // the Clue question itself OR
   // empty screen if it was already answered
   return (
-    <div onClick={() => props.selectQuestion(props.clueObject)} className="clueValue">${props.clueObject.value}</div>
-    // <div onClick={props.selectQuestion} className="clueValue">${props.clueObject.value}</div>
+    <div onClick={() => {props.selectQuestion(props.clueObject)}} className="clueValue">${props.clueObject.value}</div>
   );
 };
 

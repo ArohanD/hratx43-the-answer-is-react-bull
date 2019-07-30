@@ -3,11 +3,12 @@ import { categories } from "../../testdata";
 import Scoreboard from "./Scoreboard";
 import Gameboard from "./Gameboard";
 import Response from "./Response";
+import Clue from "./Clue"
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       results: categories,
       currentQuestion: {},
@@ -23,13 +24,9 @@ export default class App extends Component {
   }
 
   selectQuestion(clueObj) {
-    // App.state.currentQuestion = this;
-    // console.log(props.state);
-    //App.setState({currentQuestion: this});
-    //console.log(currentQuestion);
-    //console.log(clueObject);
-    this.setState({currentQuestion: clueObj});
-    console.log(clueObj);
+    this.setState({ currentQuestion: clueObj });
+    console.log(this);
+
   }
 
   render() {
@@ -37,7 +34,7 @@ export default class App extends Component {
       <div id={"app"}>
         <Gameboard currentQuestion={this.state.currentQuestion} selectQuestion={this.selectQuestion} categories={this.state.results} answeredQuestions={this.state.answeredQuestions} />
         <Scoreboard score={this.state.score} />
-        <Response recordResponse={null} submitResponse={null}/>
+        <Response recordResponse={null} submitResponse={null} />
       </div>
     );
   }

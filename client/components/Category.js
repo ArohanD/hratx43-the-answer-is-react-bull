@@ -6,8 +6,11 @@ const Category = props => {
   return (
     <div className={'category'} data-testid="category">
       <div className="categoryTitle">{props.title.toUpperCase()}</div>
+      {/* {props.categoryBucket.map(clueItem =>
+            <Clue selected={props.selected} selectQuestion={props.selectQuestion} answered={false} clueObject={clueItem} />
+          )} */}
       {props.categoryBucket.map(clueItem =>
-            <Clue selected={false} selectQuestion={props.selectQuestion} answered={false} clueObject={clueItem} />
+            <Clue selected={props.selected} selectQuestion={props.selectQuestion} answered={false} clueObject={clueItem} />
           )}
     </div>
   );
