@@ -5,7 +5,7 @@ import Clue from './Clue'
 const Category = props => {
   return (
     <div className={'category'} data-testid="category">
-      <div class="categoryTitle">{props.title.toUpperCase()}</div>
+      <div className="categoryTitle">{props.title.toUpperCase()}</div>
       {props.categoryBucket.map(clueItem =>
             <Clue selected={false} selectQuestion={props.selectQuestion} answered={false} clueObject={clueItem} />
           )}

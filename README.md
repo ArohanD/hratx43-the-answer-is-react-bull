@@ -60,11 +60,11 @@ Please note how some components are nested in other components. Your data should
 
 Acceptance criteria:
  
-- [ ] Displays GAMEBOARD (use testdata.js)
-  - [ ] Includes CATEGORIES (with correct info), each displays CATEGORY
-  - [ ] CATEGORY by default should list CLUES with their $ value
-- [ ] Displays SCOREBOARD
-  - [ ] Should default to $0
+- [X] Displays GAMEBOARD (use testdata.js)
+  - [X] Includes CATEGORIES (with correct info), each displays CATEGORY
+  - [X] CATEGORY by default should list CLUES with their $ value
+- [X] Displays SCOREBOARD
+  - [X] Should default to $0
 - [ ] RESPONSE
   - [ ] Should only accept a response when a CLUE is selected
 
